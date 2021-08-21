@@ -4,8 +4,9 @@
 
 
 # 忽略 ignore-test 文件夹中的所有文件
+# 文件目录已经放到src中了，如果需要测试则需要放到src外面
 /ignore-test/*
 
 # !表示不忽略
 # 但是不忽略 ignore-test 文件夹中的 ignore.js 文件
-!/ignore-test/ignore.js
+# !/ignore-test/ignore.js

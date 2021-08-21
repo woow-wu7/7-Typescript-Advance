@@ -1,7 +1,7 @@
 # Typescript 进阶
 
 
-##### (1) 项目依赖
+#### (1) 项目依赖
 - vite jquery @types/jquery
 
 
@@ -13,3 +13,6 @@
 - 注意: rm -r 中的-r表示的是 ( recursive: 递归 ) 的意思
 - 资料: https://juejin.cn/post/6844903831579410439
 
+
+#### 资料
+- tsconfig.json全解析 https://lq782655835.github.io/blogs/project/ts-tsconfig.html

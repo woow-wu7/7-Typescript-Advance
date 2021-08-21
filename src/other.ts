@@ -1,1 +1,1 @@
-const other = 'other'
+export const other = 'other'
