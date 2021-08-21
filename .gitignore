@@ -1,0 +1,11 @@
+# node_modules
+/node_modules
+/build
+
+
+# 忽略 ignore-test 文件夹中的所有文件
+/ignore-test/*
+
+# !表示不忽略
+# 但是不忽略 ignore-test 文件夹中的 ignore.js 文件
+!/ignore-test/ignore.js
