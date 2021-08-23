@@ -59,3 +59,24 @@ testKeyof({
   name: 'woow_wu7',
   age: 20
 })
+
+
+
+/*
+测试枚举 - 数字成员的 ( 反向映射 )
+解析：
+1. 数字枚举成员能 - 反向映射
+2.
+问题：为什么数字枚举成员能反向映射？
+回答：因为 - enum枚举，既可以做为数据，也可以作为类型
+扩展：enum 和 class 既可以做类型，也可以做数据
+3.
+Good[name] 是 ( T[K] - 索引访问操作符 )，所以 ( name必须是一个类型，即K必须是一个类型 )
+*/
+enum Good {
+  name = 1,
+  age = 3
+}
+const number = Good.name // 1
+const string = Good[number] // 'name'
+
