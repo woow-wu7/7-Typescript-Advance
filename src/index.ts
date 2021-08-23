@@ -45,3 +45,17 @@ const fun_test_interface = (params: Studuent) => {
 
 // 测试声明文件，type
 const fun_test_type:Tfn = (name) => name;
+
+
+// 测试keyof
+interface ITest {
+  name: string;
+  age: 20;
+}
+const testKeyof = (params: ITest) => {
+  console.log(`params`, params)
+}
+testKeyof({
+  name: 'woow_wu7',
+  age: 20
+})
