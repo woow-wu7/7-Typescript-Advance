@@ -116,4 +116,5 @@ function notUse(age: number, who: string) {
 }
 
 let aaaaa
+const bbb = aaaaa
 
