@@ -71,6 +71,9 @@
     /* Advanced Options */
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true,        /* Disallow inconsistently-cased references to the same file. */
+    "noImplicitAny": true, // 有any就报错 ( implicit是隐式的意思 )
+    "noUnusedLocals": true, // 有未使用的变量时，是否报错
+    "noUnusedParameters": true, // 有未使用的参数时，是否报错
   },
   "include": [
     "src/**/*"

@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1630372021944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1630372061316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \n \n // 测试声明文件，全局变量声明\n // num已经在 ( types/index.d.ts ) 中声明成了全局变量，因此这里可以直接使用\n-golbal_let_number = 10;\n+const golbal_let_number = 10;\n console.log(`num`, golbal_let_number)\n \n // 测试声明文件，全局常量声明并赋值\n // con已经在 ( types/index.d.ts ) 中声明成了全局常量，因此这里可以直接使用\n"
+                },
+                {
+                    "date": 1630372077917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n console.log(`num`, golbal_let_number)\n \n // 测试声明文件，全局常量声明并赋值\n // con已经在 ( types/index.d.ts ) 中声明成了全局常量，因此这里可以直接使用\n-console.log(`con`, global_const_number)\n+// console.log(`con`, global_const_number)\n \n // 测试声明文件，全局函数\n global_function(10)\n \n"
+                },
+                {
+                    "date": 1630372111723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,47 +19,47 @@\n \n \n // 测试声明文件，全局变量声明\n // num已经在 ( types/index.d.ts ) 中声明成了全局变量，因此这里可以直接使用\n-const golbal_let_number = 10;\n-console.log(`num`, golbal_let_number)\n+// const golbal_let_number = 10;\n+// console.log(`num`, golbal_let_number)\n \n // 测试声明文件，全局常量声明并赋值\n // con已经在 ( types/index.d.ts ) 中声明成了全局常量，因此这里可以直接使用\n // console.log(`con`, global_const_number)\n \n // 测试声明文件，全局函数\n-global_function(10)\n+// global_function(10)\n \n // 试声明文件，命名空间，类似对象\n-obj.age  = 20;\n-obj.name // 只读\n+// obj.age  = 20;\n+// obj.name // 只读\n \n // 测试声明文件，函数重载\n-const go = fn_overload('11')\n-const go2 = fn_overload(10)\n+// const go = fn_overload('11')\n+// const go2 = fn_overload(10)\n \n // 测试声明文件，interface\n-const fun_test_interface = (params: Studuent) => {\n-  return params\n-}\n+// const fun_test_interface = (params: Studuent) => {\n+//   return params\n+// }\n \n // 测试声明文件，type\n-const fun_test_type:Tfn = (name) => name;\n+// const fun_test_type:Tfn = (name) => name;\n \n \n // 测试keyof\n-interface ITest {\n-  name: string;\n-  age: 20;\n-}\n-const testKeyof = (params: ITest) => {\n-  console.log(`params`, params)\n-}\n-testKeyof({\n-  name: 'woow_wu7',\n-  age: 20\n-})\n+// interface ITest {\n+//   name: string;\n+//   age: 20;\n+// }\n+// const testKeyof = (params: ITest) => {\n+//   console.log(`params`, params)\n+// }\n+// testKeyof({\n+//   name: 'woow_wu7',\n+//   age: 20\n+// })\n \n \n \n /*\n@@ -72,14 +72,14 @@\n 扩展：enum 和 class 既可以做类型，也可以做数据\n 3.\n Good[name] 是 ( T[K] - 索引访问操作符 )，所以 ( name必须是一个类型，即K必须是一个类型 )\n */\n-enum Good {\n-  name = 1,\n-  age = 3\n-}\n-const number = Good.name // 1\n-const string = Good[number] // 'name'\n+// enum Good {\n+//   name = 1,\n+//   age = 3\n+// }\n+// const number = Good.name // 1\n+// const string = Good[number] // 'name'\n \n \n // 测试类型保护\n interface TestObj {\n"
+                },
+                {
+                    "date": 1630372120885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,20 @@\n \n // 2\n // 测试 tsconfig.json中的 target 和 module，即 ( 编译后的js的版本类型和模块类型 )\n \n-import { other } from './other'\n-import { reverse } from './util/index'\n-import { reverse2 } from './util/index2'\n-import jQuery from 'jquery'\n+// import { other } from './other'\n+// import { reverse } from './util/index'\n+// import { reverse2 } from './util/index2'\n+// import jQuery from 'jquery'\n \n-const str = 'string'\n-const fn = () => {\n-  // return reverse([other + str])\n-  return reverse2(reverse([other + str]));\n-}\n-fn()\n-console.log(jQuery('#boot'))\n+// const str = 'string'\n+// const fn = () => {\n+//   // return reverse([other + str])\n+//   return reverse2(reverse([other + str]));\n+// }\n+// fn()\n+// console.log(jQuery('#boot'))\n \n \n // 测试声明文件，全局变量声明\n // num已经在 ( types/index.d.ts ) 中声明成了全局变量，因此这里可以直接使用\n"
+                },
+                {
+                    "date": 1630372294630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,10 +84,8 @@\n // 测试类型保护\n interface TestObj {\n   name: string;\n }\n-\n const testObj: TestObj = {\n   name: 'woow_wu7'\n }\n-console.log(typeof testObj)\n-\n+type TestObj2 = typeof testObj\n"
+                },
+                {
+                    "date": 1630372593274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,11 +81,20 @@\n // const string = Good[number] // 'name'\n \n \n // 测试类型保护\n+\n+// typeof 对象\n interface TestObj {\n   name: string;\n }\n const testObj: TestObj = {\n   name: 'woow_wu7'\n }\n type TestObj2 = typeof testObj\n+\n+\n+// typeof 函数\n+function go(address: string): string[] {\n+  return [address]\n+}\n+type Go = typeof go\n"
+                },
+                {
+                    "date": 1630372940334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,4 +97,7 @@\n function go(address: string): string[] {\n   return [address]\n }\n type Go = typeof go\n+\n+\n+// \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630373317829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,21 +83,32 @@\n \n // 测试类型保护\n \n // typeof 对象\n-interface TestObj {\n-  name: string;\n-}\n-const testObj: TestObj = {\n-  name: 'woow_wu7'\n-}\n-type TestObj2 = typeof testObj\n+// interface TestObj {\n+//   name: string;\n+// }\n+// const testObj: TestObj = {\n+//   name: 'woow_wu7'\n+// }\n+// type TestObj2 = typeof testObj\n \n \n-// typeof 函数\n\\ No newline at end of file\n-function go(address: string): string[] {\n-  return [address]\n+// // typeof 函数\n+// function go(address: string): string[] {\n+//   return [address]\n+// }\n+// type Go = typeof go\n+\n+\n+// keyof\n+interface Superx {\n+  name: string;\n+  age: number;\n+  language: any[];\n }\n-type Go = typeof go\n \n-\n-// \n+type Sub11 = keyof Superx\n+type Sub22= keyof Array<Superx>\n+function go(obj: Sub22) {\n+  obj.length\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630373343386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,15 +100,11 @@\n // type Go = typeof go\n \n \n // keyof\n-interface Superx {\n+interface Super {\n   name: string;\n   age: number;\n   language: any[];\n }\n \n-type Sub11 = keyof Superx\n-type Sub22= keyof Array<Superx>\n-function go(obj: Sub22) {\n-  obj.length\n\\ No newline at end of file\n-}\n+type Sub1 = keyof Super\n"
+                },
+                {
+                    "date": 1630458883821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,4 +107,8 @@\n   language: any[];\n }\n \n type Sub1 = keyof Super\n+\n+function notAny(name: any) {\n+  \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630458928785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,7 +108,7 @@\n }\n \n type Sub1 = keyof Super\n \n-function notAny(name: any) {\n-  \n+function notAny(name) {\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630459096119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,7 +108,5 @@\n }\n \n type Sub1 = keyof Super\n \n-function notAny(name) {\n-\n-}\n\\ No newline at end of file\n+function notAny(name) {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630459577793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,5 +108,7 @@\n }\n \n type Sub1 = keyof Super\n \n-function notAny(name) {}\n\\ No newline at end of file\n+function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n+\n+const notUse = null;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630459661073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,5 +110,5 @@\n type Sub1 = keyof Super\n \n function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n \n-const notUse = null;\n\\ No newline at end of file\n+let notUse = null;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630459726659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,5 +110,5 @@\n type Sub1 = keyof Super\n \n function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n \n-let notUse = null;\n\\ No newline at end of file\n+let notUse;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630459872184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,5 +110,7 @@\n type Sub1 = keyof Super\n \n function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n \n-let notUse;\n\\ No newline at end of file\n+function notUse(age: number, who: string) {\n+  console.log(`age`, age)\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630460017318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,7 +110,7 @@\n type Sub1 = keyof Super\n \n function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n \n-function notUse(age: number, who: string) {\n-  console.log(`age`, age)\n-}\n\\ No newline at end of file\n+// function notUse(age: number, who: string) {\n+//   console.log(`age`, age)\n+// }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1630460118106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,7 +110,8 @@\n type Sub1 = keyof Super\n \n function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错\n \n-// function notUse(age: number, who: string) {\n-//   console.log(`age`, age)\n-// }\n\\ No newline at end of file\n+function notUse(age: number, who: string) {\n+  console.log(`age`, age)\n+}\n+\n"
+                },
+                {
+                    "date": 1630460454610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,4 +114,6 @@\n function notUse(age: number, who: string) {\n   console.log(`age`, age)\n }\n \n+let aaaaa\n+\n"
+                }
+            ],
+            "date": 1630372021944,
+            "name": "Commit-0",
+            "content": "// 1\n// tsc src/*.ts 编译所有scr文件夹中的ts文件\n\n// 2\n// 测试 tsconfig.json中的 target 和 module，即 ( 编译后的js的版本类型和模块类型 )\n\nimport { other } from './other'\nimport { reverse } from './util/index'\nimport { reverse2 } from './util/index2'\nimport jQuery from 'jquery'\n\nconst str = 'string'\nconst fn = () => {\n  // return reverse([other + str])\n  return reverse2(reverse([other + str]));\n}\nfn()\nconsole.log(jQuery('#boot'))\n\n\n// 测试声明文件，全局变量声明\n// num已经在 ( types/index.d.ts ) 中声明成了全局变量，因此这里可以直接使用\ngolbal_let_number = 10;\nconsole.log(`num`, golbal_let_number)\n\n// 测试声明文件，全局常量声明并赋值\n// con已经在 ( types/index.d.ts ) 中声明成了全局常量，因此这里可以直接使用\nconsole.log(`con`, global_const_number)\n\n// 测试声明文件，全局函数\nglobal_function(10)\n\n// 试声明文件，命名空间，类似对象\nobj.age  = 20;\nobj.name // 只读\n\n// 测试声明文件，函数重载\nconst go = fn_overload('11')\nconst go2 = fn_overload(10)\n\n// 测试声明文件，interface\nconst fun_test_interface = (params: Studuent) => {\n  return params\n}\n\n// 测试声明文件，type\nconst fun_test_type:Tfn = (name) => name;\n\n\n// 测试keyof\ninterface ITest {\n  name: string;\n  age: 20;\n}\nconst testKeyof = (params: ITest) => {\n  console.log(`params`, params)\n}\ntestKeyof({\n  name: 'woow_wu7',\n  age: 20\n})\n\n\n\n/*\n测试枚举 - 数字成员的 ( 反向映射 )\n解析：\n1. 数字枚举成员能 - 反向映射\n2.\n问题：为什么数字枚举成员能反向映射？\n回答：因为 - enum枚举，既可以做为数据，也可以作为类型\n扩展：enum 和 class 既可以做类型，也可以做数据\n3.\nGood[name] 是 ( T[K] - 索引访问操作符 )，所以 ( name必须是一个类型，即K必须是一个类型 )\n*/\nenum Good {\n  name = 1,\n  age = 3\n}\nconst number = Good.name // 1\nconst string = Good[number] // 'name'\n\n\n// 测试类型保护\ninterface TestObj {\n  name: string;\n}\n\nconst testObj: TestObj = {\n  name: 'woow_wu7'\n}\nconsole.log(typeof testObj)\n\n"
+        }
+    ]
+}
