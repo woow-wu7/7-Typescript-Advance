@@ -17,7 +17,6 @@
 // fn()
 // console.log(jQuery('#boot'))
 
-
 // 测试声明文件，全局变量声明
 // num已经在 ( types/index.d.ts ) 中声明成了全局变量，因此这里可以直接使用
 // const golbal_let_number = 10;
@@ -46,7 +45,6 @@
 // 测试声明文件，type
 // const fun_test_type:Tfn = (name) => name;
 
-
 // 测试keyof
 // interface ITest {
 //   name: string;
@@ -59,8 +57,6 @@
 //   name: 'woow_wu7',
 //   age: 20
 // })
-
-
 
 /*
 测试枚举 - 数字成员的 ( 反向映射 )
@@ -80,7 +76,6 @@ Good[name] 是 ( T[K] - 索引访问操作符 )，所以 ( name必须是一个�
 // const number = Good.name // 1
 // const string = Good[number] // 'name'
 
-
 // 测试类型保护
 
 // typeof 对象
@@ -92,12 +87,22 @@ Good[name] 是 ( T[K] - 索引访问操作符 )，所以 ( name必须是一个�
 // }
 // type TestObj2 = typeof testObj
 
-
 // // typeof 函数
 // function go(address: string): string[] {
 //   return [address]
 // }
 // type Go = typeof go
+
+
+
+
+const allowJs = require("./other.js");
+// allowJs=false
+// 1
+// 报错：找不到名称 "require"
+// 解决：是否需要为节点安装类型定义? 请尝试使用 `npm i --save-dev @types/node`，然后在 tsconfig 中将 `node` 添加到 types 字段
+
+
 
 
 // keyof
@@ -107,14 +112,13 @@ interface Super {
   language: any[];
 }
 
-type Sub1 = keyof Super
+type Sub1 = keyof Super;
 
 function notAny(name) {} // 设置了 noImplicitAny: true，则不能出现隐式any，这里name就会报错
 
 function notUse(age: number, who: string) {
-  console.log(`age`, age)
+  console.log(`age`, age);
 }
 
-let aaaaa
-const bbb = aaaaa
-
+let aaaaa;
+const bbb = aaaaa;
